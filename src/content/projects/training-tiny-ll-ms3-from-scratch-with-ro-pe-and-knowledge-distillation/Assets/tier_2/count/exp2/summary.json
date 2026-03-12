@@ -1,0 +1,56 @@
+{
+    "best_epoch": 9,
+    "total_epochs": 59,
+    "total_time_min": 8.401969174544018,
+    "avg_time_per_epoch_min": 0.14486153749213823,
+    "total_params": 15301120,
+    "train_loss": {
+        "mean": 0.012809341923424731,
+        "min": 5.676964307512991e-08,
+        "max": 0.7432916757613934,
+        "final": 2.4272495582088204e-07,
+        "best": 4.308126579550967e-06
+    },
+    "val_hard_loss": {
+        "mean": 2.5563862460788105e-07,
+        "min": 0.0,
+        "max": 1.0865556771022966e-05,
+        "final": 0.0,
+        "best": 0.0
+    },
+    "val_kd_loss": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "final": 0.0,
+        "best": 0.0
+    },
+    "val_total_loss": {
+        "mean": 2.5563862460788105e-07,
+        "min": 0.0,
+        "max": 1.0865556771022966e-05,
+        "final": 0.0,
+        "best": 0.0
+    },
+    "val_perplexity": {
+        "mean": 1.0000002545825506,
+        "min": 1.0,
+        "max": 1.0000108480453491,
+        "final": 1.0,
+        "best": 1.0
+    },
+    "val_token_accuracy": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "final": 1.0,
+        "best": 1.0
+    },
+    "val_exact_match": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "final": 1.0,
+        "best": 1.0
+    }
+}

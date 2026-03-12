@@ -1,0 +1,25 @@
+{
+    "name": "exp2",
+    "task_name": "wikitext",
+    "seeds": [
+        42
+    ],
+    "max_seq_len": 256,
+    "batch_size": 8,
+    "use_teacher_probs": true,
+    "top_k": 50,
+    "embed_dim": 256,
+    "nhead": 4,
+    "num_layers": 3,
+    "dim_feedforward": 1024,
+    "dropout": 0.1,
+    "lr": 0.0001,
+    "epochs": 50,
+    "temp": 1.0,
+    "accum_steps": 8,
+    "patience": 5,
+    "save_model": true,
+    "load_model": "tier_0/next_token/exp2/best_model.pth",
+    "use_wandb": false,
+    "notes": ""
+}

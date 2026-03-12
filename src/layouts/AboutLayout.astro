@@ -1,0 +1,48 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+const pages = await getCollection('pages');
+const page = pages.find(p => p.slug === 'about');
+
+if (!page) {
+  return Astro.redirect('/404');
+}
+
+// Render markdown to get Content component
+const { Content } = await render(page);
+
+// Sidebar data from frontmatter
+const skills = page.data.skills || [];
+const languages = page.data.languages || [];
+---
+
+<PageLayout page={page}>
+  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-12">
+    <!-- Main content -->
+    <div class="md:col-span-2 prose max-w-full">
+      <Content />
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6">
+      {skills.length > 0 && (
+        <>
+          <h3 class="text-lg font-semibold">Core Skills</h3>
+          <ul class="space-y-2 text-sm">
+            {skills.map(skill => <li>{skill}</li>)}
+          </ul>
+        </>
+      )}
+
+      {languages.length > 0 && (
+        <>
+          <h3 class="text-lg font-semibold mt-6">Languages</h3>
+          <ul class="space-y-2 text-sm">
+            {languages.map(lang => <li>{lang}</li>)}
+          </ul>
+        </>
+      )}
+    </aside>
+  </div>
+</PageLayout>

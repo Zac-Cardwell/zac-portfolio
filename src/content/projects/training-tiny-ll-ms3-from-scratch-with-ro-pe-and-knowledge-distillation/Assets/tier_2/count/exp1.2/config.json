@@ -1,0 +1,26 @@
+{
+    "name": "exp1.2",
+    "task_name": "count",
+    "seeds": [
+        42
+    ],
+    "max_seq_len": 256,
+    "batch_size": 8,
+    "use_teacher_probs": false,
+    "top_k": 50,
+    "embed_dim": 512,
+    "nhead": 4,
+    "num_layers": 3,
+    "dim_feedforward": 2048,
+    "dropout": 0.1,
+    "lr": 0.0001,
+    "epochs": 100,
+    "temp": 1.0,
+    "accum_steps": 8,
+    "patience": 50,
+    "save_model": true,
+    "load_model": "tier_0/next_token/exp1/best_model.pth",
+    "use_wandb": false,
+    "weighted_loss": false,
+    "notes": ""
+}

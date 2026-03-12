@@ -1,0 +1,23 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const pages = await getCollection('pages');
+const page = pages.find(p => p.id === 'about');
+
+if (!page) {
+  return Astro.redirect('/404');
+}
+---
+<PageLayout page={page}>
+  <div class="custom-about">
+    <!-- Add any custom content here -->
+    <p>This is my custom About page!</p>
+  </div>
+</PageLayout>
+
+<style>
+.custom-about {
+  padding: 2rem;
+}
+</style>
