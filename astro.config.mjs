@@ -27,11 +27,11 @@ import { fileURLToPath } from 'url';
 
 // Deployment platform configuration
 const DEPLOYMENT_PLATFORM = process.env.DEPLOYMENT_PLATFORM || 'netlify';
-const BASE = '/zac-portfolio';
+const BASE = process.env.GITHUB_ACTIONS ? '/zac-portfolio' : '';
 
 export default defineConfig({
   site: 'https://zac-cardwell.github.io',
-  base: '/zac-portfolio',
+  base: BASE,
   deployment: {
     platform: DEPLOYMENT_PLATFORM
   },
@@ -129,10 +129,9 @@ image: {
       remarkPlugins: [
       remarkObsidianImageSize, // Parse Obsidian image size syntax first
       [remarkInternalLinks, { base: BASE }],
-      remarkInternalLinks,
       remarkInlineTags,
       remarkObsidianComments, // Remove Obsidian comments (%%...%%) early in processing
-      remarkFolderImages,
+      [remarkFolderImages, { base: BASE }],,
       remarkObsidianEmbeds,
       // Bases directive (table-only v1)
       remarkBases,
