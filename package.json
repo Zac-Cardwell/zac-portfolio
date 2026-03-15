@@ -1,6 +1,7 @@
 {
   "name": "astro-modular",
   "version": "0.8.1",
+  "packageManager": "pnpm@10.30.3",
   "type": "module",
   "description": "A flexible blog theme designed for Obsidian users.",
   "main": "index.js",
@@ -58,8 +59,7 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2",
     "unified": "^11.0.5",
-    "unist-util-visit": "^5.0.0",
-    "packageManager": "pnpm@10.30.3"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@types/hast": "^3.0.4",
